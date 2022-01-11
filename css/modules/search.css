@@ -17,7 +17,7 @@
   background-color: #F5F5F5;
   border-radius: 20px;
   will-change: border-radius;
-  transition: border-radius 0.2s ease;
+  transition: border-radius 1s ease 0.2s;
   border: none;
   z-index: 2;
 }
@@ -31,7 +31,7 @@
   border: none;
   border-radius: 20px 0 0 20px;
   transform: scaleX(0);
-  transition: transform 0.24s ease 0.2s;
+  transition: transform 0.2s ease 0.2s;
   transform-origin: right;
   background-color: #F5F5F5;
 }
