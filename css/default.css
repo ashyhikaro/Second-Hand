@@ -4,6 +4,7 @@ html {
   --f5-color: #F5F5F5;
   --green-color: #A4EE08;
   --pink-color: #D93162;
+  --main-bg-color: #fff;
 }
 
 *, *:after, *:before {
