@@ -95,6 +95,10 @@
   .footer {
     padding-bottom: 72px;
   }
+
+  .footer__list-contacts {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -105,7 +109,7 @@
   .footer__list-nav {
     grid-template-columns: repeat(2, minmax(max-content, 1fr));
     gap: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 85px;
   }
 
   .footer__link-contacts {
@@ -114,8 +118,9 @@
 }
 
 @media (max-width: 760px) {
-
-
+  .footer__list-nav {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 580px) {
@@ -123,7 +128,17 @@
     padding: 30px 0 40px;
   }
 
+  .footer__list-nav {
+    margin-bottom: 40px;
+  }
+
   .footer__list-contacts {
+    margin-bottom: 40px;
+    justify-content: flex-start;
+  }
+
+  .footer__list-contacts-telMail {
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
@@ -133,8 +148,6 @@
   }
 
   .footer__agreement {
-    display: flex;
-    flex-direction: column;
     margin: 0;
   }
 
@@ -144,6 +157,11 @@
   }
 
   .footer__agreement-text {
+    position: relative;
+    display: block;
+  }
+
+  .footer__agreement-text2 {
     position: relative;
   }
 
@@ -156,5 +174,9 @@
     left: 0;
     bottom: 1px;
     background-color: var(--main-bg-color);
+  }
+
+  .footer__agreement-text2:after {
+    width: 85%;
   }
 }
