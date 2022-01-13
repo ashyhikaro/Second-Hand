@@ -91,6 +91,18 @@
   line-height: 26px;
 }
 
+.footer__link:hover {
+  opacity: 0.7;
+}
+
+.footer__link:focus {
+  opacity: 0.7;
+}
+
+.footer__agreement:hover, .footer__agreement:focus{
+  opacity: 0.7;
+}
+
 @media (max-width: 1200px) {
   .footer {
     padding-bottom: 72px;
