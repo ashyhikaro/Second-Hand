@@ -68,6 +68,10 @@
 }
 
 @media (max-width: 760px){
+  .search__close {
+    display: none;
+  }
+
   .search__input {
     position: static;
     width: 100%;
