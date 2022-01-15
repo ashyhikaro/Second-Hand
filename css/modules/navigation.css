@@ -46,7 +46,7 @@
   background-color: var(--main-color);
 }
 
-.navigation__link:active:after {
+.navigation__list .navigation__item:active:after {
   height: 0;
 }
 
