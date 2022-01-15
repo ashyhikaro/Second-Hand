@@ -1,6 +1,7 @@
 .navigation__list {
   display: flex;
   gap: 60px;
+  z-index: 10;
 }
 
 .navigation__item {
@@ -43,6 +44,14 @@
   left: 0;
   bottom: 1px;
   background-color: var(--main-color);
+}
+
+.navigation__link:active:after {
+  height: 0;
+}
+
+.navigation__list .navigation__item:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 1000px) {

@@ -1,9 +1,15 @@
-const burgerMenu = ({classActive, selectorMenu, selectorBtn}) => {
+const burgerMenu = ({classActive, selectorMenu, selectorBtn, selectorClose}) => {
   const btn = document.querySelector(selectorBtn);
   const menu = document.querySelector(selectorMenu);
 
   btn.addEventListener('click', () => {
     menu.classList.toggle(classActive);
+  });
+
+  menu.addEventListener('click', event => {
+    if(event.target.closest(selectorClose)) {
+      menu.classList.remove(classActive);
+    }
   });
 
 };
