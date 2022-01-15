@@ -1,7 +1,9 @@
 import Swiper from './swiper-bundle.esm.browser.min.js';
 
-const slider = ({selectorSlider, pagination, bulletClass, bulletActiveClass}) => {
-  new Swiper (selectorSlider, {
+const slider = ({selectorSlider, pagination, bulletClass, bulletActiveClass, selectorParentSlider}) => {
+
+  const swiper = new Swiper (selectorSlider, {
+    init: false,
     autoplay: true,
     loop: true,
     effect: 'flip',
@@ -26,6 +28,20 @@ const slider = ({selectorSlider, pagination, bulletClass, bulletActiveClass}) =>
       }
     }
   });
+
+  const checkSlider = () => {
+    const href = location.href;
+    if (href.includes('?')) {
+      swiper.disable();
+      document.querySelector(selectorParentSlider) ?.remove();
+    } else {
+      swiper.init();
+    }
+  };
+
+  checkSlider();
+
+  return checkSlider;
 };
 
 export default slider;

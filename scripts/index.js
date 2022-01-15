@@ -2,6 +2,8 @@ import burgerMenu from "./modules/burgerMenu.js";
 import searchControl from "./modules/searchControl.js";
 import selectControl from "./modules/selectControl.js";
 import slider from "./modules/slider.js";
+import renderGoods from "./modules/renderGood.js";
+import interceptLink from "./modules/interceptLink.js";
 
 burgerMenu({
   selectorBtn: '.navigation__btn',
@@ -25,9 +27,16 @@ selectControl({
   breakpoint: 760,
 });
 
-slider({
+const checkSlider = slider({
+  selectorParentSlider: '.hero',
   selectorSlider: '.hero__slider',
   pagination: '.swiper-pagination',
   bulletClass: 'hero__slider-line',
   bulletActiveClass: 'hero__slider-line_active',
 });
+
+renderGoods(location.search, () => {
+  document.body.style.opacity = '1';
+});
+
+interceptLink(checkSlider);
