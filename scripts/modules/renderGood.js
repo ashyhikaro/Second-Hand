@@ -1,6 +1,11 @@
 import serviceGoods from "../service/serviceGoods.js";
+import {getStorage} from "../service/serviceStorage.js";
 
 const createCard = ({id, title, image, price, discountPrice}) => {
+  const allFavorite = getStorage('favorite');
+
+
+
   const li = document.createElement('li');
   li.classList.add('goods__item');
 
@@ -8,7 +13,9 @@ const createCard = ({id, title, image, price, discountPrice}) => {
             <article class="item">
               <img src="${image}" alt="${title}" class="item__img">
 
-              <button class="item__favorite-btn" data-id="${id}">
+              <button class="${allFavorite.includes(id) ?
+                'item__favorite-btn active' : 'item__favorite-btn'
+              }" data-id="${id}">
                 <svg width="28" height="24">
                   <use xlink:href="#heart"></use>
                 </svg>
@@ -17,7 +24,7 @@ const createCard = ({id, title, image, price, discountPrice}) => {
               <div class="item__control-wrapper">
                 <h3 class="item__title">${title}</h3>
 
-                <button class="item__to-cart" data-id="${id}">В корзину</button>
+                <button class="item__to-cart to-cart" data-id="${id}">В корзину</button>
 
                 <p class="item__price">
                   ${discountPrice ? `${discountPrice} ₽

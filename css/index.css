@@ -2,10 +2,17 @@
 @import "normalize.css";
 @import "modules/swiper-bundle.min.css";
 @import "default.css";
+
 @import "modules/header.css";
 @import "modules/navigation.css";
 @import "modules/search.css";
+
 @import "modules/hero.css";
 @import "modules/goods.css";
+@import "modules/to-cart.css";
 @import "modules/footer.css";
 @import "modules/item.css";
+
+@import "modules/overlay.css";
+@import "modules/modal-item.css";
+@import "modules/props.css";

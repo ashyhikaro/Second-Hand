@@ -20,6 +20,10 @@
   transition: color .4s ease, opacity .4s ease;
 }
 
+.item__favorite-btn.active {
+  color: var(--pink-color);
+}
+
 .item__favorite-btn:hover {
   color: var(--pink-color);
   opacity: 0.5;
@@ -49,31 +53,7 @@
   line-height: 22px;
 }
 
-.item__to-cart{
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  background-color: var(--main-color);
-  color: var(--main-bg-color);
-  border: none;
-  padding: 8px;
-}
 
-.item__to-cart:hover {
-  background-color: #464343;
-}
-
-.item__to-cart:active {
-  background-color: #FFFFFF;
-  border: 1px solid #272727;
-  color: #272727;
-}
-
-.item__to-cart:focus {
-  background-color: #F5F5F5;
-  border: 1px solid #272727;
-  color: #272727;
-}
 
 .item__price {
   margin: 0;
