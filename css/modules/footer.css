@@ -50,15 +50,15 @@
 }
 
 .footer__social-link_instagram {
-  background-image: url("/img/insta.svg");
+  background-image: url("img/insta.svg");
 }
 
 .footer__social-link_facebook {
-  background-image: url("/img/facebook.svg");
+  background-image: url("img/facebook.svg");
 }
 
 .footer__social-link_vk {
-  background-image: url("/img/vk.svg");
+  background-image: url("img/vk.svg");
 }
 
 .footer__agreement {
