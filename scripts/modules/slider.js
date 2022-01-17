@@ -30,8 +30,9 @@ const slider = ({selectorSlider, pagination, bulletClass, bulletActiveClass, sel
   });
 
   const checkSlider = () => {
+    const regexp = /\?(search|categori|list)=/;
     const href = location.href;
-    if (href.includes('?')) {
+    if (regexp.test(href)) {
       swiper.disable();
       document.querySelector(selectorParentSlider) ?.remove();
     } else {

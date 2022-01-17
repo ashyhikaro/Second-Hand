@@ -38,6 +38,10 @@
   opacity: 0.4;
 }
 
+.overlay__modal_cart {
+  padding: 60px 100px;
+}
+
 @media (max-width: 1200px) {
   .overlay__modal {
     padding: 70px 80px;

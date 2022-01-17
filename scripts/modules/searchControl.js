@@ -1,4 +1,6 @@
-const searchControl = ({selectorBtn, selectorForm, classActive, selectorClose, breakpoint}) => {
+import renderGoods from "./renderGood.js";
+
+const searchControl = ({selectorBtn, selectorForm, classActive, selectorClose, breakpoint, callback}) => {
   const btn = document.querySelector(selectorBtn);
   const form = document.querySelector(selectorForm);
   const close = document.querySelector(selectorClose);
@@ -25,6 +27,13 @@ const searchControl = ({selectorBtn, selectorForm, classActive, selectorClose, b
   btn.addEventListener('click', activateForm);
   close.addEventListener('click', deactivateForm);
 
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const searchURL = `?search=${e.target.search.value}`;
+    history.pushState(searchURL.substring(1), searchURL.substring(1), searchURL);
+    renderGoods(searchURL);
+    callback();
+  });
 };
 
 

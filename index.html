@@ -194,7 +194,7 @@
     <div class="overlay__modal">
       <button class="overlay__button-close"></button>
       <div class="modal-item">
-        <img src="img/cfcf2f84bb228803625561152c2b9c6e2.jpg" alt="Название товара" class="modal-item__img">
+        <img src="img/cfcf2f84bb228803625561152c2b9c6e2.jpg" alt="Название товара" class="modal-item__img" width="380" height="440">
         <div class="modal-item__description">
           <h2 class="modal-item__title">Жилет</h2>
 
@@ -234,51 +234,21 @@
   </div>
 
   <div class="overlay overlay_cart">
-    <div class="overlay__modal">
+    <div class="overlay__modal overlay__modal_cart">
       <button class="overlay__button-close" type="button"></button>
       <form class="modal-cart">
 
         <ul class="modal-cart__list">
-          <li class="modal-cart__item">
-            <img src="img/cfcf2f84bb228803625561152c2b9c6e2.jpg" alt="Жилет" class="modal-cart__img"
-                 width="380" height="440">
-
-            <div class="modal-cart__wrapper">
-              <h3 class="modal-cart__subtitle">Жилет</h3>
-              <ul class="modal-cart__props props">
-                <li class="props__item">
-                  <h4 class="props__title">Артикул</h4>
-                  <p class="props__description">IX001XW016CK</p>
-                </li>
-                <li class="props__item">
-                  <h4 class="props__title">Количество</h4>
-                  <div class="props__description">
-                    <button class="props__btn props__btn__minus" type="button">-</button>
-                    <output class="prop__count" name="count">2</output>
-                    <button class="props__btn props__btn__plus" type="button">+</button>
-                  </div>
-                </li>
-                <li class="props__item">
-                  <h4 class="props__title">Цена, шт</h4>
-                  <p class="props__description">4500 ₽</p>
-                </li>
-                <li class="props__item">
-                  <h4 class="props__title">Стоимость</h4>
-                  <p class="props__description">9000 ₽</p>
-                </li>
-              </ul>
-
-              <div class="modal-cart__footer">
-                <p class="modal-cart__total">Итог:
-                  <output class="modal-cart__total-price" name="total-price">9000</output>
-                  <span>₽</span>
-                </p>
-
-                <button class="modal-cart__submit" type="submit"></button>
-              </div>
-            </div>
-          </li>
         </ul>
+
+        <div class="modal-cart__footer">
+          <p class="modal-cart__total">Итог:
+            <output class="modal-cart__total-price" name="total-price">9000</output>
+            <span class="modal-cart__total-price">₽</span>
+          </p>
+
+          <button class="modal-cart__submit" type="submit">Оформить заказ</button>
+        </div>
 
       </form>
     </div>

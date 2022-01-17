@@ -36,9 +36,14 @@ const renderModal = (data) => {
     btnToFavorite.classList.remove('active');
   }
 
+  const addCart = getStorage('cart');
+  const itemCart = addCart.find(item => item.id === data.id);
+
+  btnToCart.textContent = itemCart ? `${itemCart.count} в корзине` : 'В корзину';
+
 };
 
-const itemModal = ({selectorHandler, selectorParent, selectorModal, classActive, closeSelector,}) => {
+const itemModal = ({selectorHandler, selectorParent, selectorModal, classActive, closeSelector, callback,}) => {
   const modal = document.querySelector(selectorModal);
   if(selectorParent) {
     const parent = document.querySelector(selectorParent);
@@ -48,17 +53,17 @@ const itemModal = ({selectorHandler, selectorParent, selectorModal, classActive,
 
       if (target) {
         await serviceGoods(renderModal, `/${target.dataset.id}`);
+        if (callback) callback();
         modal.classList.add(classActive);
       }
     });
   } else  {
-    const parent = document.querySelector('.goods__list');
-    parent.addEventListener('click', async e => {
-      const target = e.target.closest(selectorHandler);
-
-      if (target) {
+    const targets = document.querySelectorAll(selectorHandler);
+    targets.forEach(target => {
+      target.addEventListener('click', () => {
+        if (callback) callback();
         modal.classList.add(classActive);
-      }
+      });
     });
   }
 
